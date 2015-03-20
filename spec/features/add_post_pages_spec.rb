@@ -23,3 +23,13 @@ describe "the edit post process" do
     expect(page).to have_content "Successfully"
   end
 end
+
+describe "the delete post process" do
+  it "deletes an existing post" do
+    post = Post.create(:title => "How to Be a Dog", :body => "Sniff, Eat and Sleep")
+    visit root_path
+    click_on 'How to Be a Dog'
+    click_on 'Delete'
+    expect(page).to have_content "deleted"
+  end
+end

@@ -31,13 +31,21 @@ class PostsController < ApplicationController
   def update
     @post = Post.new(post_params)
     if @post.save
-      flash[:notice] = "Successfully updated your post '#{@post.title}'."
+      flash[:notice] = "Successfully updated #{@post.title}."
       redirect_to posts_path
     else
-      flash[:alert] = "There was a problem, post not update. Please fix or contact suport."
+      flash[:alert] = "There was a problem, post not updated. Please fix or contact suport."
       render :new
     end
   end
+
+  def destroy
+    @post = Post.find(params[:id])
+    flash[:notice] = "#{@post.title} successfully deleted."
+    @post.destroy
+    redirect_to posts_path
+  end
+
 
   private
 

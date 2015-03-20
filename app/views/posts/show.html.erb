@@ -5,3 +5,5 @@
 <p> <%= @post.body %> </p>
 
 <%= link_to "Edit", edit_post_path %>
+<br>
+<%= link_to "Delete", post_path(@post), :data => {:confirm => "Are you sure?", :method => "delete"} %>
