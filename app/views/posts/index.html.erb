@@ -1,9 +1,12 @@
 <h1> All Posts </h1>
 
-<% @posts.each do |post| %>
-
-  <%= link_to post.title, post_path(post) %>
-
-<% end %>
-
+<table>
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= link_to post.title, post_path(post) %></td>
+      <td><%= post.created_at.to_date %></td>
+    </tr>
+  <% end %>
+</table>
+<br>
 <%= link_to "Create New Post", new_post_path %>
