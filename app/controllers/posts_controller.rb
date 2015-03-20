@@ -14,7 +14,6 @@ class PostsController < ApplicationController
       flash[:notice] = "Successfully posted your post '#{@post.title}'."
       redirect_to posts_path
     else
-      flash[:alert] = "There was a problem, post not saved. Please fix or contact suport."
       render :new
     end
   end
@@ -33,7 +32,6 @@ class PostsController < ApplicationController
       flash[:notice] = "Successfully updated #{@post.title}."
       redirect_to posts_path
     else
-      flash[:alert] = "There was a problem, post not updated. Please fix or contact suport."
       render :new
     end
   end
