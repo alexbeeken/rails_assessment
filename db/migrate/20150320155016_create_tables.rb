@@ -1,6 +1,9 @@
 class CreateTables < ActiveRecord::Migration
   def change
-    create_table :tables do |t|
+    create_table :posts do |t|
+      t.string :title
+      t.string :body
+      t.timestamps
     end
   end
 end
