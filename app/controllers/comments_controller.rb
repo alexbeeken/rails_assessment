@@ -18,6 +18,11 @@ class CommentsController < ApplicationController
     end
   end
 
+  def edit
+    @post = Post.find(params[:id])
+    @comment = Comment.find(params[:comment_id])
+  end
+
   private
 
   def comment_params

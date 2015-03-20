@@ -14,7 +14,8 @@
 <ul>
   <% @post.comments.each do |comment| %>
 
-  <li> <%= comment.name %> said "<%= comment.body %>" at <%= comment.created_at.to_time %> </li>
+  <li> <%= comment.name %> said "<%= comment.body %>" at <%= comment.created_at.to_time %>
+        <%= link_to "Edit Comment", edit_post_comment_path(comment, @post) %></li>
 
   <% end %>
 </ul>

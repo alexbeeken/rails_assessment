@@ -25,7 +25,6 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
-    render :edit
   end
 
   def update
