@@ -8,6 +8,9 @@
 <br>
 <%= link_to "Delete", post_path(@post), :data => {:confirm => "Are you sure?", :method => "delete"} %>
 <br>
+
+<%= link_to "Comment", new_post_comment_path(@post) %>
+
 <ul>
   <% @post.comments.each do |comment| %>
 
