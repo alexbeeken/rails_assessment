@@ -8,7 +8,7 @@ describe "signing up" do
     fill_in 'Email', :with => 'a@a.com'
     fill_in 'Password', :with => '12345678'
     fill_in 'Password confirmation', :with => '12345678'
-    click_on 'Sign up'
+    click_on 'Register'
     expect(page).to have_content "Logged in as a@a.com"
   end
 end
