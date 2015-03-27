@@ -11,4 +11,14 @@ describe "signing up" do
     click_on 'Register'
     expect(page).to have_content "Logged in as a@a.com"
   end
+
+  it 'logs in an existing user' do
+    user = FactoryGirl.create(:user)
+    visit '/'
+    click_on 'Login'
+    fill_in 'Username', :with => 'alex'
+    fill_in 'Password', :with => '12345678'
+    click_on 'Log in'
+    expect(page).to have_content "Logged in as me@me.com"
+  end
 end
