@@ -3,6 +3,8 @@ Blogger App
 
 This is a small Rails app created for educational purposes. It is a blog application which allows users to manage entries and comments. It also has a user authentication feature that lets users create accounts and login. This does not inhibit you from being able to post or comment on links.
 
+You can see a working example [here](https://heroku-postgres-504a7289.herokuapp.com/users/login)!
+
 ## Installation
 
 1. Navigate to a local directory of your choice and clone the project with `git clone http://github.com/alexbeeken/rails_assessment`.
