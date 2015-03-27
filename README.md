@@ -1,7 +1,7 @@
 Blogger App
 ===============
 
-This is a small Rails app created for educational purposes. It is a blog application which allows users to manage entries and comments.
+This is a small Rails app created for educational purposes. It is a blog application which allows users to manage entries and comments. It also has a user authentication feature that lets users create accounts and login. This does not inhibit you from being able to post or comment on links.
 
 ## Installation
 
