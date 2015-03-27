@@ -8,19 +8,28 @@
 </head>
 <body>
 
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path %> |
-  <%= link_to "Login", new_user_session_path %>
-<% end %>
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <h1><%= link_to "Blogger", "/" %></h1>
+    <% if user_signed_in? %>
+      Logged in as <strong><%= current_user.email %></strong>.
+      <%= link_to 'Edit profile', edit_user_registration_path %> |
+      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Sign up", new_user_registration_path %> |
+      <%= link_to "Login", new_user_session_path %>
+    <% end %>
+  </div>
+</nav>
 
 <font color="red"><%= flash[:alert] %></font>
 <font color="green"><%= flash[:notice] %></font>
 
-<%= yield %>
+<div class="container">
+  <div class="jumbotron">
+    <%= yield %>
+  </div>
+</div>
 
 </body>
 </html>
